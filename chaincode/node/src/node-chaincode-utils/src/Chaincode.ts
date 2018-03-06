@@ -1,6 +1,6 @@
 import shim = require('fabric-shim');
 import { ChaincodeInterface, Stub,ChaincodeReponse } from 'fabric-shim';
-import { Log } from './utils/logger';
+import { Winston } from './utils/logger';
 import { LoggerInstance } from 'winston';
 import { ERRORS } from './constants/errors';
 import { ChaincodeError } from './ChaincodeError';
@@ -12,7 +12,7 @@ export class Chaincode implements ChaincodeInterface {
     private logger: LoggerInstance;
 
     constructor() {
-        this.logger = Log.debug(this.name);
+        this.logger = Winston.log(this.name);
     }
 
     /**

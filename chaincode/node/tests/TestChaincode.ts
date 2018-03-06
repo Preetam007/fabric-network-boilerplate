@@ -1,8 +1,8 @@
+import { Chaincode } from './../src/node-chaincode-utils/src/chaincode';
 import shim = require('fabric-shim');
 import { ChaincodeReponse, Stub } from 'fabric-shim';
-import { Chaincode } from '../src/Chaincode';
-import { TransactionHelper } from '../src/ChaincodeStub';
-import { Transform } from '../src/utils/datatransform';
+import { TransactionHelper } from '../src/node-chaincode-utils/src/ChaincodeStub';
+import { Transform } from '../src/node-chaincode-utils/src/utils/datatransform';
 
 export class TestChaincode extends Chaincode {
 

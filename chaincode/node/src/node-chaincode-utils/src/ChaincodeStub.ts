@@ -1,5 +1,5 @@
 import { Stub, KV } from 'fabric-shim';
-import { Log } from './utils/logger';
+import { Winston } from './utils/logger';
 import { Transform } from './utils/datatransform';
 import * as _ from 'lodash';
 
@@ -25,7 +25,7 @@ export class TransactionHelper {
             queryString = <string>query;
         }
 
-        Log.debug(`Query: ${queryString}`);
+        Winston.log(`Query: ${queryString}`);
 
         const iterator = await this.stub.getQueryResult(queryString);
 
@@ -115,7 +115,7 @@ export class TransactionHelper {
             bufferedPayload = Buffer.from(JSON.stringify(payload));
         }
 
-        Log.debug(`Setting Event ${name} with payload ${JSON.stringify(payload)}`);
+        Winston.log(`Setting Event ${name} with payload ${JSON.stringify(payload)}`);
 
         this.stub.setEvent(name, bufferedPayload);
     }

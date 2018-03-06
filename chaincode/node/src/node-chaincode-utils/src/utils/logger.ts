@@ -1,9 +1,9 @@
 
 import { Logger, LoggerInstance, transports } from 'winston';
 
-export class Log {
+export class Winston {
 
-    public static debug(name: string, level?: string): LoggerInstance {
+    public static log(name: string, level?: string): LoggerInstance {
         return new Logger({
             transports: [new transports.Console({
                 level: level || 'debug',

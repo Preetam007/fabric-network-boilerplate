@@ -1,7 +1,7 @@
-import { ChaincodeMockStub } from '../src/mocking/ChaincodeMockStub';
+import { ChaincodeMockStub } from './../src/node-chaincode-utils/src/mocking/ChaincodeMockStub';
+import { Transform } from './../src/node-chaincode-utils/src/utils/datatransform';
 import { TestChaincode } from './TestChaincode';
 import { ChaincodeReponse } from 'fabric-shim';
-import { Transform } from '../src/utils/datatransform';
 
 import { expect } from 'chai';
 
